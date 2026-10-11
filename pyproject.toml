@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sharp-mc"
+version = "1.1.0"
+description = "Async cross-platform Minecraft server tool (Paper, Temurin, Modrinth plugins/mods)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Sharp Team" }]
+keywords = ["minecraft", "paper", "server", "temurin", "modrinth", "async"]
+dependencies = [
+    "aiohttp>=3.9.0",
+    "aiofiles>=23.2.1",
+    "click>=8.1.7",
+    "rich>=13.7.0",
+    "platformdirs>=4.2.0",
+]
+
+[project.scripts]
+sharp = "sharp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sharp*"]

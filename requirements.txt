@@ -1,0 +1,6 @@
+aiohttp>=3.9.0
+aiofiles>=23.2.1
+click>=8.1.7
+rich>=13.7.0
+platformdirs>=4.2.0
+toml>=0.10.2
